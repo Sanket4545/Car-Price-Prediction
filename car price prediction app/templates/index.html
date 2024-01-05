@@ -1,0 +1,64 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Car For Sale</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <span class="logo"><h2>car-for-sale.com</h2></span>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Company</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Car Details Form</h1>
+        <form action="form" method="post">
+            <label for="carName">Car Name:</label>
+            <input type="text" id="carName" name="carName" required>
+
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" required>
+
+            <label for="presentPrice">Present Price:</label>
+            <input type="text" id="presentPrice" name="presentPrice" required>
+
+            <label for="kmsDriven">Kms Driven:</label>
+            <input type="text" id="kmsDriven" name="kmsDriven" required>
+
+            <label for="owner">Owner:</label>
+            <input type="number" id="owner" name="owner" placeholder="1 for 1st owner and 2 for 2nd" required>
+
+            <label for="fuelType">Fuel Type:</label>
+            <select id="fuelType" name="fuelType" required>
+                <option value="Diesel">Diesel</option>
+                <option value="Petrol">Petrol</option>
+            </select>
+
+            <label for="sellerType">Seller Type:</label>
+            <select id="sellerType" name="sellerType" required>
+                <option value="Individual">Individual</option>
+                <option value="Dealer">Dealer</option>
+            </select>
+
+            <label for="transmissionType">Transmission Type:</label>
+            <select id="transmissionType" name="transmissionType" required>
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select>
+
+            <input type="submit" id="submit" name="submit" value="Predict Car Price">
+        </form>
+    </div>
+</body>
+</html>
